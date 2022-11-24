@@ -48,17 +48,33 @@ A Git "Repos" is a workspace which tracks and manages files within a folder.
 
 ### Initiate a new Git Repos
 
-`cd Project`
-`git init #this initiate a new git repo`
+`cd Project`<br>
+`git init #this initiate a new git repo`<br>
 `git status #check the status of new repo created`
 
 #### If you want to delete a git repo
 
-`rm -rf .git`
+`rm -rf .git`<br>
 
-- Prevent your .git to automatically get deleted by changing the permission to (555)
+- Prevent your .git to automatically get deleted by changing the permission to (555)<br>
   `chmod 555 .git` or `chmod -x .git`
 
 ⚠️ DO NOT INIT A REPO INSIDE A REPO, VERIFY IT USING `git status` first
 
 ### What is git commit ?
+
+Inside a git repository there are three working area named. First when someone makes changes to the files inside the working directory its gets added to the staging area using the command <br>`git add <file> <file> ...`
+
+Commit area is a save point where new files can be added till you decide it either push it to remote repository or roll it back to delete the file.
+
+Then using command <br>
+`git commit -m "<msg>"` <br>
+it can be moved to repository where .git keeps tracks of all the commited files.
+
+![Commit](./images/commit.png)
+
+#### How to perform best commits ?
+
+- Try to do atomic commits.
+- In atomic commits, try to keep each commit focused on a single thing
+- Atomic commits also makes code easy to review
