@@ -83,3 +83,7 @@ it can be moved to repository where .git keeps tracks of all the commited files.
 
 - Github document shows that we should use Present-Tense Imperative Style technique.
 - You can either use past tense or present tense.
+
+### Git default commit editor setup!
+
+`git config --global core.editor "code --wait"`
