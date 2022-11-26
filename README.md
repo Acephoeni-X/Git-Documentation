@@ -78,3 +78,8 @@ it can be moved to repository where .git keeps tracks of all the commited files.
 - Try to do atomic commits.
 - In atomic commits, try to keep each commit focused on a single thing
 - Atomic commits also makes code easy to review
+
+##### Which tense to use while writing a commit message?
+
+- Github document shows that we should use Present-Tense Imperative Style technique.
+- You can either use past tense or present tense.
