@@ -161,3 +161,33 @@ Note: Here gitignore.io which will help you to find all gitignore files for your
 - In order to rename branch -m flag is used.
 - Also inorder the rename the branch you should be at that branch.
 - Command to rename: `git branch -m <new-name>`<br>
+
+### Merging
+
+- If we want to incorporate changes from one branch to another merging is use.
+- Command is `git merge <branch-name>`<br>
+- Remember two merging concept:
+  -- We merge branches not commits.
+  -- We always merge to the current HEAD branch (change to branch where you want merge to happen then use the command to merge another branch to this branch)
+
+#### There are three types of merges
+
+- Fast-Forward Merge
+- Merge Commit (No Conflicts)
+- Merge Commit (Conflicts)
+
+##### Fast-Forward Merge
+
+- In fast forward merge we do not have any merge conflict. This means that new updated branch already contains all the works of the master/ main branch
+- In this only the pointer of master branch gets shifted to the new branch HEAD position. (Easiest type of merge)
+
+##### Merge Commit (No Conflicts)
+
+- In this type of merge no conflict occur between the branches.
+- In this the main/ master branch does not contain any changes that will create the conflict and merge can happen automatically
+
+##### Merge Commit (Conflicts)
+
+- In this type of merge conflict occur between the branches.
+- In this the main/ master branch does contain any changes that will create the conflict and merge can not happen automatically.
+- You have to manually edit the changes, you have to select which changes to keep and which changes to remove.
