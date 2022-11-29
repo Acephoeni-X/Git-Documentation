@@ -191,3 +191,59 @@ Note: Here gitignore.io which will help you to find all gitignore files for your
 - In this type of merge conflict occur between the branches.
 - In this the main/ master branch does contain any changes that will create the conflict and merge can not happen automatically.
 - You have to manually edit the changes, you have to select which changes to keep and which changes to remove.
+
+### Git Diff
+
+- Git Diff is use to view changes between commits, branches, files, our working directory and more !
+- Simple `git diff` shows changes in our current working directory that are not staged for the next commit.
+
+```
+line one in git diff shows two files on which comparisons are been made.
+
+line two contains some hash (We don't need to worry about it).
+
+line 3 contains files a and symbols represent whether data is added(+) or removed(-) from the file.
+
+after that we have chunk
+every chunk contains chunk header represented by "@@"
+after chunk header changes are been shown
+```
+
+##### Chunk Header
+
+- Chunk header representation `@@ <file a info> <file b info> @@`.
+  ![gitDiff](./images/gitDiff.png)
+- Here -3, 5 represent that earlier file a contains 5 lines and changes had been made from line 3.
+- +3, 4 represents that now file b contains 4 lines and changes had been made from line 3.
+
+#### Different types of Git Diff
+
+- Viewing unstaged changes.
+- Viewing working directory changes.
+- Viewing staged changes.
+- Comparing changes across branches.
+- Comparing changes across commits
+
+###### Viewing unstaged changes
+
+- Simple `git diff` command shows changes between the staged area and the changes made currently in the working directory.
+- Staged area is the area after the `git add`. So after git add command any new changes made in the working directory can be seen using the `git diff` command.
+
+###### Viewing working directory changes
+
+- `git diff HEAD` will show all the changes in the working tree since your last commit.
+
+###### Viewing staged changes
+
+- `git diff --staged` will show all the changes between staged area and the last commit.
+
+⚠️ We can also pass file name to get changes related to that file only.
+
+###### Comparing changes across branches
+
+- `git diff <branch1> <branch2>` will show all the changes between both these branches.
+- In this order matters in which branches are written.
+
+###### Comparing changes across commits
+
+- `git diff <commit1_hash> <commit2_hash>` will show all the changes between both these commits.
