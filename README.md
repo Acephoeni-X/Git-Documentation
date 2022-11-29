@@ -247,3 +247,24 @@ after chunk header changes are been shown
 ###### Comparing changes across commits
 
 - `git diff <commit1_hash> <commit2_hash>` will show all the changes between both these commits.
+
+### What is git stash ?
+
+- Git stash provides easy way of stashing uncommit changes so that we can return back to it, without having to made unnecessary commits.
+- Command is `git stash`, which saves most recent changes in the stash.
+- In order to reapply changes back in the stash `git stash pop` is used. This command will remove changes from the stashing area and moves it back in the working directory.
+- `git stash apply` will remove not remove the changes from the stash, but also reapply back in the working directory.
+- `git stash apply ` is useful when we want to apply stash in multiple places (such as in multiple branch).
+
+##### Working with multiple stash!!!
+
+- To see all the things in the stash use `git stash`
+- In order to apply particular stash use `git stash apply stash@{id}`
+
+##### Removing everything from stash
+
+- `git stash clear`
+
+##### Remove specific stash
+
+- `git stash drop stash@{id}`
