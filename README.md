@@ -268,3 +268,29 @@ after chunk header changes are been shown
 ##### Remove specific stash
 
 - `git stash drop stash@{id}`
+
+### Undoing changes and Travelling back in time
+
+- In order to checkout old commit `git checkout <commit_id>` command is use.
+- This will detach the head from the last commit and attach the head to commit, whose commit_id is mentioned.
+- You only will able to see the commit, make changes and it will not affect your initial commit.
+- In order to move again to the latest commit use command `git switch <branch_name>` or `git switch -`.
+
+#### Disregarding Changes
+
+- Suppose you have typed something in the file unintentionally, now you want to revert back to the last commit.
+- You can do this using command `git checkout HEAD <file_name>`.
+- There is also another command introduced, a new command used nowadays `git restore <file_name>`.
+- We can also time travel using `git restore --source HEAD~2 <file_name> `.
+
+#### Unstaging Changes
+
+- If you added the file using `git add` command for the next commit, but you don't want it.
+- You can use the command `git restore --staged <file_name>` to unstage the changes.
+
+#### Undoing Commits
+
+- `git reset <commid_id>` will reset the repo back to a specific commit. The commits are gone.
+- Above command will not lose the changes, only the commit history are gone.
+- If you want to undo both the changes and the commits all together you need to use `git reset --hard <commit_id>`.<br>
+- There is also one command `git revert`, it creates a new commit which undos the changes from a commit. Here you have to enter a message.
