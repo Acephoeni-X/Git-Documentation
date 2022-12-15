@@ -294,3 +294,39 @@ after chunk header changes are been shown
 - Above command will not lose the changes, only the commit history are gone.
 - If you want to undo both the changes and the commits all together you need to use `git reset --hard <commit_id>`.<br>
 - There is also one command `git revert`, it creates a new commit which undos the changes from a commit. Here you have to enter a message.
+
+### Github
+
+##### Push from local branch to remote branch with another name
+
+- `git push origin <local_branch>:<remote_branch>`.
+
+##### -u option in git push
+
+- This options allows to set upstream of the branch we are pushing.
+- So that next time we push we don't need to specify the branch name again and again. We then can just use `git push`
+
+### origin/main
+
+- When we clone a repo from github we have two pointer pointing at same location, one is origin/main and another is local/main.
+- When we commit update anything locally local/main gets updated.
+- In order to check what it is look like when we first cloned the repo we can use checkout: `git checkout origin/main`.
+- origin/main can be treated as a commit.
+
+#### Difference between Git Fetch and Git Pull
+
+- Git fetch and pull is use to get updates/changes from the remote repository to local repository.
+
+##### Git fetch
+
+- Git fetch will allow us to download changes from the remote repository but those changes will not automatically integerated into our working files.
+- Git fetch allows us to see what others have been working on, without having to merge those changes on our local repo.
+- Git fetch syntax: `git fetch <remote> <branch>`.
+- Now these changes are stored on the remote branch, eg to retrieve changes use `git checkout origin/master`.
+
+##### Git pull
+
+- Git pull will allow us to download changes from the remote repository will not merge automatically.
+- Git pull is Git fetch + Git merge.
+- Syntax: `git pull <origin> <branch>`.
+- Note you want to be in that branch where you want the merge to happen.
