@@ -351,3 +351,34 @@ after chunk header changes are been shown
   - reword (r): use commit, but edit the commit message
   - fixup (f): meld to previous commit, and commit message remains same as the previous commit's commit message
   - drop (d): remove the commit, also the changes made during this commit also gets removed
+
+### Tags
+
+- Git tags are use to mark specific points in the commit history.
+- They are just tags as tags in real life.
+- They are typically use to mark versions in the commit history known as semantic versioning.
+- Two types of tags are available:
+  - lightweight tags: They are just name/label that points to a particular commit.
+  - annotated tags: it stores extra meta data including authors name, email, the date and the tagging message.
+- Tag name must be unique.
+
+##### Viewing all tags
+
+- Syntax: `git tag`
+- We can also filter using wildcard using option -l, `git tag -l "*<sub_part_of_tag_name>*"`.
+- We can also go in the detach head state using `git checkout <tag_name>`.
+
+##### Creating Tag
+
+- Syntax: `git tag <tag_name>`. This will create lightweight tag.
+- Syntax: `git tag -a <tag_name>`. This will create annotated tag.
+- In order to see annotated tag use `git show <tag_name>`.
+- Tagging previous commits: `git tag -a <tag_name> <commit_id>`.
+
+##### Deleting Tag
+
+- Syntax: `git tag -d <tag_name>`.
+
+##### Pushing Tag
+
+- Syntax: `git push --tag`
