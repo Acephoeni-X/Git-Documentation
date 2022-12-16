@@ -330,3 +330,11 @@ after chunk header changes are been shown
 - Git pull is Git fetch + Git merge.
 - Syntax: `git pull <origin> <branch>`.
 - Note you want to be in that branch where you want the merge to happen.
+
+### Rebase
+
+- Rebase is same as merging but with clear commit history.
+- Rebase rewrite the whole commit history.
+- Syntax: `git rebase <branch_name>`.
+- Avoid rebasing the in the master branch.
+- Conflicts are same as in merging.
