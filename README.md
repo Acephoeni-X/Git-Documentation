@@ -338,3 +338,16 @@ after chunk header changes are been shown
 - Syntax: `git rebase <branch_name>`.
 - Avoid rebasing the in the master branch.
 - Conflicts are same as in merging.
+
+- Rebase also helps in rewrite, delete, rename or even reorder commits.
+
+##### Interactive Rebase
+
+- -i option which stands for interactive rebase, allows us to edit commits, add files, drop commits, etc.
+- Interactive Rebase often use to cleanup and organize the commit histories.
+- Syntax is: `git rebase -i <commit_id>`.
+- There are few options in the interactive rebase:
+  - pick (p): use commit
+  - reword (r): use commit, but edit the commit message
+  - fixup (f): meld to previous commit, and commit message remains same as the previous commit's commit message
+  - drop (d): remove the commit, also the changes made during this commit also gets removed
