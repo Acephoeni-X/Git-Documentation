@@ -401,3 +401,16 @@ after chunk header changes are been shown
 ##### Undoing the rebase with Reflog
 
 - Same as commit restoring rebase can be restore using the command `git reset --hard <commit_id>`. Type in commit id before the rebase.
+
+### Where does git config file stored?
+
+- git config file is stored in the `~/.gitconfig`.
+
+##### Creating git aliases
+
+- Syntax:
+
+```
+[alias]
+  s=status    // git s= git status
+```
