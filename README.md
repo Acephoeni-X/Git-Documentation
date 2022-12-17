@@ -381,4 +381,23 @@ after chunk header changes are been shown
 
 ##### Pushing Tag
 
-- Syntax: `git push --tag`
+- Syntax: `git push --tag`.
+
+### Git Reflogs
+
+- Git keeps record of the when tip of the branch(HEAD) and other references were update in the repo.
+- We can view and update these references using git reflog command.
+- It can been seen as a log file where every thing a developer do inside a repo gets stored.
+
+##### Show Reflogs
+
+- `git reflog show HEAD`
+
+##### Restoring lost commit
+
+- Even reset commits are stored in the reflog, which can be seen using `git reflog show <branch_name>`.
+- After getting the commit id you can use `git reset --hard <commit_id>`, to again get back the lost commit.
+
+##### Undoing the rebase with Reflog
+
+- Same as commit restoring rebase can be restore using the command `git reset --hard <commit_id>`. Type in commit id before the rebase.
